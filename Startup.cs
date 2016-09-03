@@ -6,7 +6,7 @@ namespace ConsoleApplication {
         public void Configure(IApplicationBuilder app){
             app.Run(context => {
                 //return context.Response.WriteAsync("Hello world");
-                return context.Response.WriteAsync(System.Environment.StackTrace);
+                return context.Response.WriteAsync("Yup, this is C#.NeT!!  " + System.Environment.StackTrace);
             });
         }
     }

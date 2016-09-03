@@ -5,7 +5,10 @@ namespace ConsoleApplication {
     public class Startup{
         public void Configure(IApplicationBuilder app){
             app.Run(context => {
-                return context.Response.WriteAsync("Hello world");
+                System.Diagnostics.StackTrace t = new System.Diagnostics.StackTrace();
+                string response = t.ToString();
+                //return context.Response.WriteAsync("Hello world");
+                return context.Response.WriteAsync(response);
             });
         }
     }

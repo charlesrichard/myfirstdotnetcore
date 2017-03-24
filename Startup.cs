@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using System.Net;
  
 namespace ConsoleApplication {
     public class Startup{
@@ -9,6 +10,11 @@ namespace ConsoleApplication {
                 return context.Response.WriteAsync("Yup, this is C#.Net, written by chuck!!" + 
                        System.Environment.NewLine + 
                        System.Environment.NewLine + 
+                       "Host name: " + Dns.GetHostName().ToString() + 
+                       System.Environment.NewLine + 
+                       "Host ip: " + Dns.GetHostEntry(Dns.GetHostName().ToString()).ToString() + 
+                       System.Environment.NewLine + 
+                       System.Environment.NewLine +
                        System.Environment.StackTrace);
             });
         }

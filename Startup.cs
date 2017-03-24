@@ -12,8 +12,6 @@ namespace ConsoleApplication {
                        System.Environment.NewLine + 
                        "Host name: " + Dns.GetHostName().ToString() + 
                        System.Environment.NewLine + 
-                       "Host ip: " + Dns.GetHostEntry(Dns.GetHostName().ToString()).ToString() + 
-                       System.Environment.NewLine + 
                        System.Environment.NewLine +
                        System.Environment.StackTrace);
             });
